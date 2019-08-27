@@ -1,2 +1,2 @@
 # WCFTest_withiOS
-calling method in WCF server using Alamofire
+calling method in WCFServer using Alamofire
