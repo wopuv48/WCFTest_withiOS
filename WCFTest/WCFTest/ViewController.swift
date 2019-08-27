@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 class ViewController: UIViewController {
-    //     url : "http://192.168.100.14:8080/WCFService_Template/WCFService_Template.svc"
+    //     url : "http://yourPortNumber/WCFService_Template/WCFService_Template.svc"
     
     func getLines() {
         let webMethodName = "ServiceTest"
@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         bodyData = bodyData + String(format: "</%@>", webMethodName)
         bodyData = bodyData + "</SOAP-ENV:Body>"
         bodyData = bodyData + "</SOAP-ENV:Envelope>"
-        let theUrl = URL(string: "http://192.168.100.14:8080/WCFService_Template/WCFService_Template.svc")
+        let theUrl = URL(string: "http://yourPortNumber/WCFService_Template/WCFService_Template.svc")
         var url = URLRequest(url: theUrl!)
         url.addValue("text/xml; charset=utf-8", forHTTPHeaderField: "Content-Type")
         url.addValue(String(format: "http://tempuri.org/IWCFService/%@", webMethodName), forHTTPHeaderField: "SOAPAction")
